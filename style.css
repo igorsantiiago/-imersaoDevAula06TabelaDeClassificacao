@@ -78,6 +78,13 @@ th, tr, td {
     padding: 3px 3px;
 }
 
+img {
+    margin-top:3px;
+    max-height: 25px;
+    max-width: 25px;
+    border-radius: 10px;
+}
+
 .botoesTabela {
     color: #f1f1f1;
     border: none;

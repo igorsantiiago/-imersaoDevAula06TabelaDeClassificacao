@@ -1,6 +1,5 @@
-var player1 = {nome: "Jogador 1", vitorias: 0, empates: 0, derrotas: 0, pontos: 0};
-var player2 = {nome: "Jogador 2", vitorias: 0, empates: 0, derrotas: 0, pontos: 0};
-
+var player1 = {imagem:"<img src=" + "https://github.com/fluidicon.png" + ">", nome: "GitHub", vitorias: 0, empates: 0, derrotas: 0, pontos: 0};
+var player2 = {imagem:"<img src=" + "https://yt3.ggpht.com/xqhIoXspeX7eqouJvNHl1xqpv9213Pl26ENZbuouXxO2RlDadjsveNXfgnj8GTUk7thFYUkVRg=s88-c-k-c0x00ffffff-no-rj" + ">",nome: "Alura", vitorias: 0, empates: 0, derrotas: 0, pontos: 0};
 var jogadores = [player1, player2];
 
 player1.pontos = calcularPontos(player1, player2);
@@ -14,7 +13,7 @@ function exibirJogadores(jogadores) {
     var elemento = "";
     for (var i = 0; i < jogadores.length; i++){
         elemento += "<tr><td><button class='botoesTabela' onClick='deletarPlayer(" + i + ")'><span class='material-icons-outlined'>clear</span>Deletar</button></td>";
-
+        elemento += "<td> <img src" + jogadores[i].imagem + "</td>";
         elemento += "<td>" + jogadores[i].nome + "</td>";
         elemento += "<td>" + jogadores[i].vitorias + "</td>";
         elemento += "<td>" + jogadores[i].empates + "</td>";
@@ -64,18 +63,23 @@ function limparPontos(i) {
 function adicionarJogador() {
     var campoAlerta = document.getElementById("alerta");
     var campoNomeJogador = document.getElementById("nomeJogador").value;
+    var url = document.getElementById("imagemJogador").value;
 
-    if (campoNomeJogador == "") {
+    if (campoNomeJogador.length == 0 || url.length == 0) {
         campoAlerta.innerHTML = "Preencha os campos solicitados"
-    } else {
+    } else if (url.endsWith(".jpg") || url.endsWith(".png") || url.endsWith(".svg") || url.endsWith(".JPG") || url.endsWith(".PNG") || url.endsWith(".SVG")){
         var nomeJogador = document.getElementById("nomeJogador").value;
-        var novoJogador = {nome: nomeJogador, vitorias:0, empates:0, derrotas:0, pontos:0};
+        var novoJogador = {imagem: "<img src=" + url + ">", nome: nomeJogador, vitorias:0, empates:0, derrotas:0, pontos:0};
 
         jogadores.push(novoJogador);
         campoAlerta.innerHTML = "";
+    } else {
+        console.error ("Endereço Inválido")
+        alert("Insira um link válido com imagem")
     }
     exibirJogadores(jogadores);
     document.getElementById("nomeJogador").value ="";
+    document.getElementById("imagemJogador").value ="";
 }
 
 function deletarPlayer() {
