@@ -75,7 +75,7 @@ function adicionarJogador() {
         campoAlerta.innerHTML = "";
     } else {
         console.error ("Endereço Inválido")
-        alert("Insira um link válido com imagem")
+        alert("Insira um link válido com imagem .jpg | .png | .svg")
     }
     exibirJogadores(jogadores);
     document.getElementById("nomeJogador").value ="";
