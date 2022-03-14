@@ -19,3 +19,5 @@ Desáfios
 - Criar um botão para zerar todos os pontos;
 - Criar um botão e inputs (campos de texto) para adicionar novos jogadores, com seus respectivos dados;
 - Utilizar seu jogo preferido para se basear na pontuação da sua tabela de classificação.
+
+Link do projeto hospedado no GitHub: https://igorsantiiago.github.io/imersaoDevAula06Classificacao/
