@@ -1,0 +1,121 @@
+* {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+body {
+    min-height: 400px;
+    color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(35deg, hsl(0, 0%, 0%), hsl(348, 97%, 63%, 0.65),hsl(0, 0%, 0%), hsl(230, 96%, 62%, 0.65), hsl(0, 0%, 0%));
+    background-size: 500% 500%;
+    animation: colors 10s ease infinite;
+}
+
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+    
+}
+
+.container {
+    text-align: center;
+    margin: 20vh auto;
+    padding: 20px;
+    height: 50vh;
+    width: 80vw;
+    background: hsl(0, 0%, 7%, 0.65);
+    border: 1px solid hsl(0, 0%, 7%, 0.75);
+    border-radius: 100px;
+}
+
+.page-title {
+    font-family: 'Bangers', cursive;
+    font-size: 3rem;
+    color: #f1f1f1;
+    margin: 4vh 0 4px;
+}
+
+.page-subtitle {
+    color: #f1f1f1;
+    margin-top: 5px;
+}
+
+.page-logo {
+    width: 200px;
+}
+
+.alura-logo {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+table {
+    border: 2px solid #f1f1f1;
+    border-collapse: collapse;
+    margin: 2vh 0;
+    font-weight: bold;
+}
+
+h1 {
+    color: #f1f1f1;
+}
+
+th, tr, td {
+    border: solid 1px #f1f1f1;
+    color: #f1f1f1;
+    padding: 3px 3px;
+}
+
+.botoesTabela {
+    color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background: none;
+    font-weight: bold;
+}
+
+.material-icons-outlined {
+    color:hsl(348, 97%, 63%, 0.65);
+    font-size: 1rem;
+}
+
+.nomeJogador {
+    width: 30vw;
+    background: none;
+    border: none;
+    margin: 2vh 0;
+    color: #f1f1f1;
+    font-size: 2rem;
+    font-weight: bold;
+    outline: none;
+}
+
+.botaoFormulario {
+    color: #f1f1f1;
+    margin: 1vh 0;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 2vh 3vw;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#alerta {
+    font-size: 2rem;
+    font-weight: bold;
+    color: hsl(348, 97%, 63%, 0.65);;
+}
